@@ -2,6 +2,15 @@ import { expect, test } from '@playwright/test';
 import { Page } from '@playwright/test';
 import { login } from '../helpers/auth';
 
+/**
+ * Referências oficiais das APIs usadas neste arquivo:
+ * - Testes, fixtures e `page`: https://playwright.dev/docs/writing-tests
+ * - Locators (`getByRole`, `getByText`, `locator` e `filter`): https://playwright.dev/docs/locators
+ * - Ações (`click`, `fill`, `clear`, `reload`): https://playwright.dev/docs/input
+ * - Navegação (`goto` e `waitForURL`): https://playwright.dev/docs/navigations
+ * - Assertions (`toBeVisible`, `toHaveURL`, `toHaveValue`, `toHaveClass`): https://playwright.dev/docs/test-assertions
+ */
+
 test.describe('Login e autenticação do OrangeHRM', () => {
   test('Exibe corretamente a tela de login', async ({ page }) => {
     await page.goto('/');
